@@ -39,9 +39,9 @@
       cartodb_leaflet.update({'query':"SELECT cartodb_id, the_geom_webmercator, aka_name FROM {{table_name}} WHERE aka_name ILIKE '%" + $(this).val() + "%'"});
     });
     var map = new L.Map('map');
-    var mapCenter = new L.LatLng(41.875185,-87.630043);
+    var mapCenter = new L.LatLng(30.288125,-97.741928);
     var mapZoom = 11;
-    var cloudmadeUrl = 'http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg',
+    var cloudmadeUrl = 'http://{s}.tile.stamen.com/terrain/{z}/{x}/{y}.jpg',
       cloudmadeAttrib = 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, ' +
         'under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. ' +
         'Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, ' +
@@ -53,9 +53,9 @@
       show_cartodb_logo: false,
       map_canvas: 'map',
       map: map,
-      user_name:'boundsj',
-      table_name: 'food_inspections',
-      query: "SELECT cartodb_id, the_geom_webmercator, aka_name FROM {{table_name}}",
+      user_name:'rantee',
+      table_name: 'food_scores',
+      query: "SELECT cartodb_id, the_geom_webmercator, name FROM {{table_name}}",
       tile_style: "#{{table_name}} {" + 
                      "marker-fill:#FF6600;" + 
                      "marker-line-color:white;" +
@@ -66,9 +66,8 @@
                      "marker-type:ellipse;" +
                      "marker-allow-overlap:true;" + 
                   "}",
-      infowindow: "SELECT cartodb_id, the_geom_webmercator, aka_name as Name, address as Address, " +
-         "facility_type as Type, " +
-         "violations as Violations, results " +
+      infowindow: "SELECT cartodb_id, the_geom_webmercator, name as Name, address as Address, " +
+         "score as Score " +
          "FROM {{table_name}} WHERE cartodb_id={{feature}}",
       auto_bound: false 
     });
