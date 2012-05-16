@@ -36,7 +36,7 @@
   $(document).ready(function() {
     {% raw %}
     $("#search_input").keyup(function() {
-      cartodb_leaflet.update({'query':"SELECT cartodb_id, the_geom_webmercator, aka_name FROM {{table_name}} WHERE aka_name ILIKE '%" + $(this).val() + "%'"});
+      cartodb_leaflet.update({'query':"SELECT cartodb_id, the_geom_webmercator, name FROM {{table_name}} WHERE name ILIKE '%" + $(this).val() + "%'"});
     });
     var map = new L.Map('map');
     var mapCenter = new L.LatLng(30.288125,-97.741928);
