@@ -60,7 +60,9 @@ img {
   max-width: 100%;
   height: auto;
   border: 0;
+  z-index: 999;
   -ms-interpolation-mode: bicubic;
+
 }
 button,
 input,
