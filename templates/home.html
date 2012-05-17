@@ -66,7 +66,7 @@
                      "marker-type:ellipse;" +
                      "marker-allow-overlap:true;" + 
                   "}",
-      infowindow: "SELECT cartodb_id, the_geom_webmercator, score as Score, name as Name, address as Address, " +score as Score, 
+      infowindow: "SELECT cartodb_id, the_geom_webmercator, score as Score, name as Name, address as Address, " + 
          "FROM {{table_name}} WHERE cartodb_id={{feature}}",
       auto_bound: false 
     });
