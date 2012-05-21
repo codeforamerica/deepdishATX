@@ -1,16 +1,16 @@
-deepdish :: view and search chicago's health inspections, on a map
+deepdishatx :: view and search austin's restaurant inspections, on a map
 -------------
 
-This is a test application to kick the tires of [cartodb](http://cartodb.com/). It was made with 
+This is a test application to kick the tires of [cartodb](http://cartodb.com/). It was originally made with 
 [Health & Human Svs Data](https://data.cityofchicago.org/Health-Human-Services/Food-Inspections/4ijn-s7e5) from
-Chicago, zachwill's [Flask_Heroku](https://github.com/zachwill/flask_heroku), and the souls of django ponies. 
+Chicago, zachwill's [Flask_Heroku](https://github.com/zachwill/flask_heroku), and the souls of django ponies by [Jesse Bounds](https://github.com/boundsj).  This app uses [similar data](https://data.austintexas.gov/dataset/Restaurant-Inspection-Scores/ecmv-9xxi) from Austin.
 
 Instructions
 ------------
 
 First, you'll need to clone the repo.
 
-    $ git clone git@github.com:boundsj/deepdish.git 
+    $ git clone git@github.com:codeforamerica/deepdish.git 
     $ cd deepdish 
 
 A forked repo of cartodb-leaflet is a submodule of deepdish. It's forked because (as of 4/9/2012) the cartodb repo does not handle touchevents so a solution for that is in the fork of cartodb-leaflet that this project uses. So, to set it up, run:
